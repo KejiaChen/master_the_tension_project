@@ -43,8 +43,8 @@
     <section class="title-block">
       <h1>Master the Tension: Force-Driven Assembly of Deformable Linear Objects with Environmental Contacts</h1>
       <p class="authors">
-        Kejia Chen<sup>1</sup>, Zhenshan Bing<sup>2</sup>, Yue Zhang<sup>1</sup>, Yansong Wu<sup>1</sup>, Fan Wu<sup>3</sup>,
-        Yuan Meng<sup>1</sup>, Yuhong Huang<sup>1</sup>, Xiangtong Yao<sup>1</sup>, Yu Zhang<sup>1</sup>, Zhenguo Sun<sup>1</sup>, 
+        Kejia Chen<sup>1&dagger;</sup>, Zhenshan Bing<sup>2&dagger;</sup>, Yue Zhang<sup>1</sup>, Yansong Wu<sup>1</sup>, Fan Wu<sup>3</sup>,
+        Yuan Meng<sup>1</sup>, Yuhong Huang<sup>1</sup>, Xiangtong Yao<sup>1</sup>, Yu Zhang<sup>1</sup>, Zhenguo Sun<sup>1</sup>,
         Yang Gao<sup>2</sup>, Fuchun Sun<sup>4</sup>, Alois Knoll<sup>1</sup>
       </p>
       <p class="affiliations">
@@ -53,6 +53,7 @@
         <sup>3</sup>Shanghai University,
         <sup>4</sup>Tsinghua University
       </p>
+      <p class="author-note">&dagger; Equal contribution</p>
       <div class="link-row">
         <a href="static/pdfs/master_the_tension.pdf" target="_blank" rel="noopener">
           <span class="button-icon" aria-hidden="true">
@@ -73,7 +74,7 @@
       </div>
     </section>
 
-    <section class="media-section">
+    <section class="media-section hero-media">
       <div class="video-embed">
         <iframe
           src="https://www.youtube.com/embed/6OqdKEL2f_0?rel=0"
@@ -83,119 +84,102 @@
           allowfullscreen>
         </iframe>
       </div>
-      <p class="media-caption">
-        We show that actively regulating axial tension can reduce the effective complexity of
-        manipulating cables, wires, and hoses, making contact-rich assembly more predictable and robust.
-      </p>
     </section>
 
-    <section class="text-section">
-      <h2>Abstract</h2>
-      <p>
-        Manipulation of deformable linear objects (DLOs), such as cables, wires, and hoses, is a significant
-        task in industrial manufacturing, but remains a fundamental challenge for robots due to DLOs' high
-        degrees of freedom and weakly constrained physical behavior. These challenges are further amplified
-        in fixture-based assembly, where frequent contact with surrounding structures tightly couples deformation,
-        rich contacts, and partial observability. Existing approaches typically manage this complexity either by
-        predicting deformation with increasingly sophisticated models or by reacting to enriched sensory feedback.
-      </p>
-      <p>
-        In this work, we take an alternative perspective. Rather than accommodating the full complexity of
-        deformable behavior, we show that the effective complexity of manipulation can be reduced by actively
-        regulating the axial tension. Appropriate tension drives the DLO's interaction into a more constrained,
-        predictable state, reducing deformation uncertainty and making contact responses more consistent.
-      </p>
-      <p>
-        Building on this insight, we propose a tension-regulated dual-arm manipulation framework for fixture-based
-        DLO assembly, in which axial tension is continuously monitored and regulated as a unifying interaction principle
-        across recurring inter-fixture transitions and fixture attachments. We validate the proposed framework on
-        real-world cable assembly tasks that involve multiple target shapes, diverse DLOs, and clip-like fixtures of
-        various materials and sizes.
-      </p>
-    </section>
-
-    <section class="media-section">
-      <h2>Use Case and Key Insight</h2>
-      <img src="static/images/use_case_new_expanded.png" alt="Use case and motivation for fixture-based DLO assembly">
-      <p class="media-caption">
-        Fixture-based DLO assembly combines transport between local targets and force-sensitive attachment.
-        Our central idea is to regulate axial tension as the interaction variable that structures both stages.
-      </p>
-    </section>
-
-    <section class="media-section">
-      <h2>Method Overview</h2>
-      <img src="static/images/framework_overview_new_helvetica.png" alt="Overview of the tension-regulated framework">
-      <p class="media-caption">
-        Tension is used as a shared principle across inter-fixture transition and fixture attachment,
-        enabling collision-aware transport and reliable clip-style insertion with proprioceptive and tactile sensing.
-      </p>
-    </section>
-
-    <section class="media-section">
-      <h2>Shape Alignment</h2>
-      <img src="static/images/shape_alignment_helvetica.png" alt="Shape alignment visualization">
-    </section>
-
-    <section class="media-section">
-      <h2>Fixing Flow</h2>
-      <img src="static/images/fixing_flow.png" alt="Fixing flow visualization">
-    </section>
-
-    <section class="media-section">
-      <h2>Experimental Overview</h2>
-      <img src="static/images/full_experiment.png" alt="Overview of experimental settings and outcomes">
-    </section>
-
-    <section class="video-section">
-      <h2>Inter-Fixture Transition</h2>
-      <div class="video-embed">
-        <iframe
-          src="https://www.youtube.com/embed/HYRLu_8fBVY?rel=0"
-          title="Inter-Fixture Transition video"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
+    <section class="text-section abstract-section">
+      <div class="abstract-text">
+        <p>
+          Manipulation of deformable linear objects (DLOs), such as cables, wires, and hoses, is a significant
+          task in industrial manufacturing, but remains a fundamental challenge for robots due to DLOs' high
+          degrees of freedom and weakly constrained physical behavior. These challenges are further amplified
+          in fixture-based assembly, where frequent contact with surrounding structures tightly couples deformation,
+          rich contacts, and partial observability.
+        </p>
+        <p>
+          In this work, we take an alternative perspective. Rather than accommodating the full complexity of
+          deformable behavior, we show that the effective complexity of manipulation can be reduced by actively
+          regulating the axial tension. Appropriate tension drives the DLO's interaction into a more constrained,
+          predictable state, reducing deformation uncertainty and making contact responses more consistent.
+        </p>
+        <p>
+          Building on this insight, we propose a tension-regulated dual-arm manipulation framework for fixture-based
+          DLO assembly, in which axial tension is continuously monitored and regulated as a unifying interaction principle
+          across recurring inter-fixture transitions and fixture attachments.
+        </p>
       </div>
-      <p class="media-caption">
-        During transport, mild tension keeps the manipulated segment taut enough for a simpler and more stable representation.
-      </p>
-    </section>
-
-    <section class="video-section">
-      <h2>Fixture Attachment</h2>
-      <div class="video-embed">
-        <iframe
-          src="https://www.youtube.com/embed/6u5nUMoDfu4?rel=0"
-          title="Fixture Attachment video"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
+      <div class="abstract-figure">
+        <img src="static/images/concept.png" alt="Concept illustration">
       </div>
-      <p class="media-caption">
-        Force-sensitive insertion behavior across diverse DLO and fixture combinations.
-      </p>
     </section>
 
-    <section class="video-section">
-      <h2>Full Assembly Experiments</h2>
-      <div class="video-embed">
-        <iframe
-          src="https://www.youtube.com/embed/9kSwDkINA50?rel=0"
-          title="Full Assembly Experiments video"
-          loading="lazy"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
+    <section class="split-section">
+      <div class="split-heading">
+        <h2>Overview</h2>
       </div>
-      <p class="media-caption">
-        End-to-end evaluations across multiple target shapes, DLOs, and clip-like fixtures.
-      </p>
+      <div class="split-grid">
+        <div class="split-media">
+          <img src="static/images/framework_overview_new_helvetica.png" alt="Overview figure">
+        </div>
+        <div class="split-media">
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/9kSwDkINA50?rel=0"
+              title="Full assembly overview video"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="text-section">
+    <section class="split-section">
+      <div class="split-heading">
+        <h2>Inter-fixture Transition</h2>
+      </div>
+      <div class="split-grid">
+        <div class="split-media">
+          <img src="static/images/shape_alignment_helvetica.png" alt="Inter-fixture transition figure">
+        </div>
+        <div class="split-media">
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/HYRLu_8fBVY?rel=0"
+              title="Transport control video"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="split-section">
+      <div class="split-heading">
+        <h2>Attachment to Fixtures</h2>
+      </div>
+      <div class="split-grid">
+        <div class="split-media">
+          <img src="static/images/fixing_flow.png" alt="Attachment to fixtures figure">
+        </div>
+        <div class="split-media">
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/6u5nUMoDfu4?rel=0"
+              title="Fixture attachment video"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+    <section class="text-section bibtex-section">
       <h2>BibTeX</h2>
       <div class="bibtex-toolbar">
         <button class="copy-button" type="button" data-copy-target="bibtex-code">Copy</button>
@@ -207,6 +191,7 @@
   year={2026}
 }</code></pre>
     </section>
+    -->
   </main>
 
   <script src="static/js/index.js"></script>

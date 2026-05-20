@@ -1,15 +1,20 @@
 body {
   margin: 0;
-  background: #ffffff;
-  color: #111111;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
+  background: #fafafa;
+  color: #161616;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
 }
 
 :root {
-  --page-width: 1240px;
-  --content-width: 1080px;
-  --text-width: 980px;
+  --page-width: 1440px;
+  --content-width: 1260px;
+  --text-width: 1040px;
+  --split-gap: 34px;
+  --card-radius: 16px;
+  --card-border: #dfdfdf;
+  --surface: #ffffff;
+  --muted: #5f5f5f;
 }
 
 a {
@@ -29,49 +34,62 @@ iframe {
 }
 
 .page {
-  width: min(var(--page-width), calc(100% - 32px));
+  width: min(var(--page-width), calc(100% - 40px));
   margin: 0 auto;
-  padding: 28px 0 56px;
+  padding: 36px 0 72px;
 }
 
 .title-block {
   width: min(var(--content-width), 100%);
   text-align: center;
-  margin: 0 auto 28px;
+  margin: 0 auto 36px;
 }
 
 .title-block h1 {
-  margin: 0 0 16px;
-  font-size: 44px;
+  max-width: 1180px;
+  margin: 0 auto 18px;
+  font-size: clamp(2.3rem, 3vw, 3.4rem);
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
 }
 
 .authors,
 .affiliations {
   margin: 10px auto 0;
   max-width: var(--content-width);
-  font-size: 24px;
+  font-size: 1.35rem;
 }
 
 .affiliations {
-  font-size: 21px;
+  font-size: 1.15rem;
+  color: var(--muted);
+}
+
+.author-note {
+  margin: 10px auto 0;
+  max-width: var(--content-width);
+  font-size: 1rem;
+  color: var(--muted);
 }
 
 .link-row {
-  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 22px;
 }
 
 .link-row a {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin: 0 10px;
-  padding: 10px 18px;
+  padding: 11px 18px;
   border: 1px solid #111111;
   border-radius: 999px;
   background: #111111;
-  font-size: 22px;
+  font-size: 1.1rem;
   color: #ffffff;
   transition: background 0.2s ease, border-color 0.2s ease;
 }
@@ -99,7 +117,7 @@ iframe {
 .media-section,
 .video-section {
   width: min(var(--content-width), 100%);
-  margin: 40px auto 0;
+  margin: 48px auto 0;
 }
 
 .text-section {
@@ -109,15 +127,16 @@ iframe {
 .text-section h2,
 .media-section h2,
 .video-section h2 {
-  margin: 0 0 14px;
+  margin: 0 0 18px;
   text-align: center;
-  font-size: 34px;
+  font-size: 2rem;
   font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .text-section p {
-  margin: 0 0 14px;
-  font-size: 22px;
+  margin: 0 0 16px;
+  font-size: 1.16rem;
   text-align: left;
 }
 
@@ -141,12 +160,114 @@ iframe {
   width: min(var(--content-width), 100%);
   margin: 0 auto;
   aspect-ratio: 16 / 9;
+  background: #000000;
 }
 
 .video-embed iframe {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+.hero-media {
+  margin-top: 32px;
+}
+
+.hero-media .video-embed {
+  width: min(1120px, 100%);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.split-section {
+  width: min(var(--content-width), 100%);
+  margin: 68px auto 0;
+  padding-top: 28px;
+  border-top: 1px solid #e7e7e7;
+}
+
+.split-heading {
+  margin-bottom: 18px;
+}
+
+.split-heading h2 {
+  margin: 0;
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.split-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--split-gap);
+  align-items: center;
+}
+
+.split-media,
+.split-text {
+  min-width: 0;
+}
+
+.split-media img,
+.split-media .video-embed {
+  width: 100%;
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.split-text {
+  max-width: 720px;
+}
+
+.split-text h2 {
+  margin: 0 0 14px;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.split-text p {
+  margin: 0 0 14px;
+  font-size: 20px;
+  text-align: left;
+}
+
+.abstract-section {
+  width: min(var(--content-width), 100%);
+  margin-top: 56px;
+}
+
+.abstract-figure {
+  width: min(1120px, 100%);
+  margin: 22px auto 0;
+}
+
+.abstract-figure img {
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.abstract-text {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding-top: 0;
+}
+
+.abstract-text p:last-child {
+  margin-bottom: 0;
+}
+
+.bibtex-section {
+  margin-top: 72px;
+  padding-top: 28px;
+  border-top: 1px solid #e7e7e7;
 }
 
 .pdf-figure {
@@ -171,11 +292,12 @@ iframe {
 }
 
 .copy-button {
-  border: 1px solid #cfcfcf;
+  border: 1px solid #d2d2d2;
+  border-radius: 999px;
   background: #f4f4f4;
   color: #111111;
-  padding: 8px 16px;
-  font-size: 18px;
+  padding: 9px 16px;
+  font-size: 1rem;
   cursor: pointer;
 }
 
@@ -185,18 +307,19 @@ iframe {
 
 pre {
   margin: 0;
-  padding: 18px;
+  padding: 20px 22px;
   overflow-x: auto;
-  background: #f7f7f7;
-  border: 1px solid #dddddd;
-  font-size: 18px;
+  background: #f5f5f5;
+  border: 1px solid #e1e1e1;
+  border-radius: 14px;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
 @media (max-width: 900px) {
   .page {
     width: calc(100% - 20px);
-    padding-top: 20px;
+    padding-top: 24px;
   }
 
   .title-block,
@@ -207,24 +330,52 @@ pre {
   }
 
   .title-block h1 {
-    font-size: 30px;
+    font-size: 2rem;
   }
 
   .authors,
   .affiliations,
+  .author-note,
   .text-section p,
   .media-caption {
-    font-size: 18px;
+    font-size: 1rem;
   }
 
   .link-row a {
-    font-size: 18px;
+    font-size: 1rem;
   }
 
   .text-section h2,
   .media-section h2,
-  .video-section h2 {
-    font-size: 28px;
+  .video-section h2,
+  .split-heading h2,
+  .split-text h2 {
+    font-size: 1.65rem;
+  }
+
+  .split-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .split-section {
+    margin-top: 48px;
+    padding-top: 22px;
+  }
+
+  .split-heading {
+    margin-bottom: 14px;
+  }
+
+  .split-text,
+  .abstract-text {
+    width: 100%;
+    max-width: none;
+    padding-top: 0;
+  }
+
+  .split-text p {
+    font-size: 1rem;
   }
 
   .pdf-figure {
@@ -232,6 +383,6 @@ pre {
   }
 
   pre {
-    font-size: 15px;
+    font-size: 0.92rem;
   }
 }
