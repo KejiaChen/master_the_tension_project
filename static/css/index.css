@@ -48,10 +48,24 @@ iframe {
 .title-block h1 {
   max-width: 1180px;
   margin: 0 auto 18px;
-  font-size: clamp(2.3rem, 3vw, 3.4rem);
-  font-weight: 700;
   line-height: 1.12;
   letter-spacing: -0.02em;
+}
+
+.title-main,
+.title-sub {
+  display: block;
+}
+
+.title-main {
+  font-size: clamp(2.45rem, 3vw, 3.45rem);
+  font-weight: 700;
+}
+
+.title-sub {
+  margin-top: 8px;
+  font-size: clamp(1.7rem, 2.2vw, 2.55rem);
+  font-weight: 600;
 }
 
 .authors,
@@ -310,7 +324,16 @@ pre {
   }
 
   .title-block h1 {
-    font-size: 2rem;
+    line-height: 1.14;
+  }
+
+  .title-main {
+    font-size: 2.1rem;
+  }
+
+  .title-sub {
+    margin-top: 6px;
+    font-size: 1.6rem;
   }
 
   .authors,
